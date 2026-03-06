@@ -1,4 +1,4 @@
-// @ts-nocheck
+// @ts-ignore - deepMerge types are complex to define strictly with recursive objects
 
 /**
  * Simple object check.

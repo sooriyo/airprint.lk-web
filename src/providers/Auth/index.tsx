@@ -61,7 +61,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       } else {
         throw new Error('Invalid login')
       }
-    } catch (e) {
+    } catch {
       throw new Error('An error occurred while attempting to login.')
     }
   }, [])
@@ -89,7 +89,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }
 
       throw new Error('Invalid login')
-    } catch (e) {
+    } catch {
       throw new Error('An error occurred while attempting to login.')
     }
   }, [])
@@ -110,7 +110,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       } else {
         throw new Error('An error occurred while attempting to logout.')
       }
-    } catch (e) {
+    } catch {
       throw new Error('An error occurred while attempting to logout.')
     }
   }, [])
@@ -133,7 +133,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         } else {
           throw new Error('An error occurred while fetching your account.')
         }
-      } catch (e) {
+      } catch {
         setUser(null)
         throw new Error('An error occurred while fetching your account.')
       }
@@ -162,7 +162,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       } else {
         throw new Error('Invalid login')
       }
-    } catch (e) {
+    } catch {
       throw new Error('An error occurred while attempting to login.')
     }
   }, [])
@@ -190,7 +190,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       } else {
         throw new Error('Invalid login')
       }
-    } catch (e) {
+    } catch {
       throw new Error('An error occurred while attempting to login.')
     }
   }, [])
@@ -213,6 +213,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   )
 }
 
-type UseAuth<T = User> = () => AuthContext  
+type UseAuth = () => AuthContext  
 
 export const useAuth: UseAuth = () => useContext(Context)

@@ -96,11 +96,11 @@ export function useClickableCard<T extends HTMLElement>({
 
   return {
     card: {
-      // @ts-expect-error
+      // @ts-expect-error - card ref type mismatch
       ref: card,
     },
     link: {
-      // @ts-expect-error
+      // @ts-expect-error - link ref type mismatch
       ref: link,
     },
   }
