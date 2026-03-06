@@ -1,0 +1,150 @@
+.footer {
+    background-color: #0066FF;
+    color: white;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    font-family: var(--font-sf-ui), sans-serif;
+}
+
+.footerLogo {
+    filter: brightness(0) invert(1);
+    height: 2.5rem;
+    width: auto;
+    margin-bottom: 2.5rem;
+}
+
+.footerTagline {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 3rem;
+    max-width: 450px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+.footerNewsletterLabel {
+    font-size: 0.9375rem;
+    margin-bottom: 1.25rem;
+    display: block;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.footerNewsletterForm {
+    background-color: white;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    padding: 0.625rem 1.25rem;
+    max-width: 480px;
+    margin-bottom: 5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.footerNewsletterInput {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.625rem;
+    color: #111827;
+    font-size: 1rem;
+    outline: none;
+    font-weight: 300;
+}
+
+.footerNewsletterInput::placeholder {
+    color: #A1A1AA;
+}
+
+.footerNewsletterButton {
+    background: transparent;
+    border: none;
+    color: #0066FF;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.footerNewsletterButton:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.footerColumnTitle {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 1.75rem;
+    color: white;
+}
+
+.footerNavLink {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9375rem;
+    margin-bottom: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 300;
+}
+
+.footerNavLink:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footerBottom {
+    margin-top: 5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-weight: 300;
+}
+
+@media (min-width: 768px) {
+    .footerBottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footerSocials {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.footerSocialLabel {
+    font-size: 0.875rem;
+    margin-right: 0.25rem;
+    opacity: 0.8;
+}
+
+.footerSocialIcon {
+    color: white;
+    transition: transform 0.2s ease;
+}
+
+.footerSocialIcon:hover {
+    transform: translateY(-2px);
+}
+
+.footerCopyright {
+    font-size: 0.875rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 1024px) {
+    .footerTagline {
+        font-size: 2rem;
+    }
+
+    .footerNewsletterForm {
+        max-width: 100%;
+    }
+}

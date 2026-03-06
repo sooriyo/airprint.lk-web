@@ -1,0 +1,53 @@
+/* Main Navigation Link Defaults */
+.navLink {
+  border-radius: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Remove CMSLink's default underline */
+.navLink::after {
+  display: none !important;
+}
+
+/* Mega Menu Dropdown Structure */
+.megaMenuContainer {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  /* Solid bright white */
+  border-top: 1px solid #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1100;
+  /* Stays above the global overlay and nav bar */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Typography for the sub-menu */
+.megaMenuColumnTitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.megaMenuLink {
+  display: block;
+  font-size: 0.9375rem;
+  color: #4b5563;
+  /* Gray-600 */
+  padding: 0.4rem 0;
+  transition: all 0.15s ease;
+  font-weight: 300;
+}
+
+.megaMenuLink:hover {
+  color: #2563eb;
+  /* Blue-600 */
+  transform: translateX(4px);
+}
