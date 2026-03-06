@@ -46,7 +46,7 @@ export const homePageData: (args: ProductArgs) => RequiredDataFromCollectionSlug
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: 'Payload Ecommerce Template',
+                  text: 'AirPrint.lk',
                   version: 1,
                 },
               ],
@@ -88,7 +88,7 @@ export const homePageData: (args: ProductArgs) => RequiredDataFromCollectionSlug
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: " to begin managing this site's content. The code for this template is completely open-source and can be found ",
+                  text: " to begin managing your site's content. We offer premium printing and packaging services tailored to your needs.",
                   version: 1,
                 },
                 {
@@ -120,7 +120,7 @@ export const homePageData: (args: ProductArgs) => RequiredDataFromCollectionSlug
                   format: 0,
                   mode: 'normal',
                   style: '',
-                  text: '. ',
+                  text: 'on our website',
                   version: 1,
                 },
               ],
@@ -609,10 +609,10 @@ export const homePageData: (args: ProductArgs) => RequiredDataFromCollectionSlug
       },
     ],
     meta: {
-      description: 'An open-source ecommerce site built with Payload and Next.js.',
+      description: 'Sri Lanka\'s leading destination for premium custom prints, packaging, and branding solutions.',
       // @ts-ignore
       image: metaImage,
-      title: 'Payload Ecommerce Template',
+      title: 'AirPrint.lk',
     },
     title: 'Home',
   }

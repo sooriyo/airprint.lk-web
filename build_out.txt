@@ -1,0 +1,192 @@
+npm warn Unknown project config "enable-pre-post-scripts". This will stop working in the next major version of npm.
+
+> build
+> cross-env NODE_OPTIONS="--no-deprecation --max-old-space-size=8000" next build
+
+ ⚠ Warning: Found multiple lockfiles. Selecting /Users/tharuka/package-lock.json.
+   Consider removing the lockfiles at:
+   * /Users/tharuka/Developer/Clients/AirPrint-lk/package-lock.json
+
+   ▲ Next.js 15.4.11
+   - Environments: .env
+
+   Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOSPC: no space left on device, write
+ ✓ Compiled successfully in 5.0s
+   Linting and checking validity of types ...
+
+Failed to compile.
+
+./src/app/(app)/(account)/account/addresses/page.tsx
+39:5  Warning: 'orders' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+40:12  Warning: 'error' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+
+./src/app/(app)/(account)/account/page.tsx
+42:12  Warning: 'error' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+72:34  Warning: 'index' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/app/(app)/(account)/orders/page.tsx
+38:12  Warning: 'error' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+50:34  Warning: 'index' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/app/(app)/[slug]/page.tsx
+46:9  Warning: 'url' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/app/(app)/checkout/confirm-order/page.tsx
+4:17  Warning: 'Fragment' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+16:9  Warning: 'paymentIntent' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/app/(app)/logout/LogoutPage/index.tsx
+7:38  Warning: 'props' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/blocks/Carousel/Component.tsx
+14:11  Warning: 'id' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/blocks/Form/Checkbox/index.tsx
+10:10  Warning: 'Error' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+19:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+22:16  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+24:15  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/blocks/Form/Component.tsx
+146:43  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/blocks/Form/Country/index.tsx
+21:35  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+24:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/blocks/Form/Email/index.tsx
+17:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/blocks/Form/Number/index.tsx
+8:10  Warning: 'Error' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+17:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/blocks/Form/Select/index.tsx
+20:35  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+23:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/blocks/Form/State/index.tsx
+21:35  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+24:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/blocks/Form/Text/index.tsx
+17:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/blocks/Form/Textarea/index.tsx
+17:22  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/collections/Pages/hooks/revalidatePage.ts
+45:14  Warning: 'e' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+
+./src/collections/Products/index.ts
+102:75  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/Cart/AddToCart.tsx
+19:9  Warning: The 'variants' logical expression could make the dependencies of useMemo Hook (at line 38) change on every render. Move it inside the useMemo callback. Alternatively, wrap the initialization of 'variants' in its own useMemo() Hook.  react-hooks/exhaustive-deps
+
+./src/components/Cart/OpenCart.tsx
+2:8  Warning: 'clsx' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+3:10  Warning: 'ShoppingCart' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+7:3  Warning: 'className' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/CategoryTabs/Item.tsx
+15:9  Warning: 'q' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/Header/MobileMenu.tsx
+32:9  Warning: 'closeMobileMenu' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/Header/index.client.tsx
+80:50  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+128:58  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+132:65  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+
+./src/components/Media/Image/index.tsx
+30:10  Warning: 'isLoading' is assigned a value but never used. Allowed unused elements of array destructuring must match /^_/u.  @typescript-eslint/no-unused-vars
+50:11  Warning: 'filename' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/Media/index.tsx
+12:31  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+22:41  Warning: Image elements must have an alt prop, either with meaningful text, or an empty string for decorative images.  jsx-a11y/alt-text
+
+./src/components/ProductGridItem/index.tsx
+1:24  Warning: 'Variant' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/ProductItem/index.tsx
+2:10  Warning: 'OrderStatus' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+4:10  Warning: 'Button' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:19  Warning: 'MediaType' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+5:30  Warning: 'Order' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+6:10  Warning: 'formatDateTime' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+22:3  Warning: 'style' is assigned a value but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/Testimonials/index.tsx
+19:54  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+107:24  Error: `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`.  react/no-unescaped-entities
+
+./src/components/checkout/CheckoutPage.tsx
+67:6  Warning: React Hook useEffect has a missing dependency: 'shippingAddress'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+105:5  Warning: React Hook useCallback has missing dependencies: 'email' and 'initiatePayment'. Either include them or remove the dependency array.  react-hooks/exhaustive-deps
+302:12  Warning: Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free.  @typescript-eslint/ban-ts-comment
+361:28  Warning: 'id' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/forms/AccountForm/index.tsx
+5:10  Warning: 'Message' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/layout/search/Categories.tsx
+6:10  Warning: 'FilterList' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/product/Gallery.tsx
+3:24  Warning: 'MediaType' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/components/product/StockIndicator.tsx
+13:9  Warning: The 'variants' logical expression could make the dependencies of useMemo Hook (at line 31) change on every render. Move it inside the useMemo callback. Alternatively, wrap the initialization of 'variants' in its own useMemo() Hook.  react-hooks/exhaustive-deps
+
+./src/endpoints/seed/home.ts
+1:15  Warning: 'Category' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+613:7  Warning: Use "@ts-expect-error" instead of "@ts-ignore", as "@ts-ignore" will do nothing if the following line is error-free.  @typescript-eslint/ban-ts-comment
+
+./src/endpoints/seed/index.ts
+149:5  Warning: 'accessoriesCategory' is assigned a value but never used. Allowed unused elements of array destructuring must match /^_/u.  @typescript-eslint/no-unused-vars
+271:5  Warning: 'hoodieID' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+277:5  Warning: 'largeTshirtHoodieVariant' is assigned a value but never used. Allowed unused elements of array destructuring must match /^_/u.  @typescript-eslint/no-unused-vars
+278:5  Warning: 'xlargeTshirtHoodieVariant' is assigned a value but never used. Allowed unused elements of array destructuring must match /^_/u.  @typescript-eslint/no-unused-vars
+316:13  Warning: 'contactPage' is assigned a value but never used. Allowed unused elements of array destructuring must match /^_/u.  @typescript-eslint/no-unused-vars
+336:9  Warning: 'customerUSAddress' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+345:9  Warning: 'customerUKAddress' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+356:9  Warning: 'pendingTransaction' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+389:5  Warning: 'succeededTransactionID' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+395:9  Warning: 'openCart' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+413:9  Warning: 'abandonedCart' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+453:5  Warning: 'completedCartID' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+458:9  Warning: 'orderInCompleted' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+482:9  Warning: 'orderInProcessing' is assigned a value but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/endpoints/seed/product-hat.ts
+1:34  Warning: 'VariantOption' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+17:3  Warning: 'variantTypes' is defined but never used. Allowed unused args must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/providers/Auth/index.tsx
+64:14  Warning: 'e' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+92:14  Warning: 'e' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+113:14  Warning: 'e' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+136:16  Warning: 'e' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+165:14  Warning: 'e' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+193:14  Warning: 'e' is defined but never used. Allowed unused caught errors must match /^(_|ignore)/u.  @typescript-eslint/no-unused-vars
+216:14  Warning: 'T' is defined but never used. Allowed unused vars must match /^_/u.  @typescript-eslint/no-unused-vars
+
+./src/utilities/deepMerge.ts
+1:1  Warning: Do not use "@ts-nocheck" because it alters compilation errors.  @typescript-eslint/ban-ts-comment
+
+./src/utilities/useClickableCard.ts
+99:7  Warning: Include a description after the "@ts-expect-error" directive to explain why the @ts-expect-error is necessary. The description must be 3 characters or longer.  @typescript-eslint/ban-ts-comment
+103:7  Warning: Include a description after the "@ts-expect-error" directive to explain why the @ts-expect-error is necessary. The description must be 3 characters or longer.  @typescript-eslint/ban-ts-comment
+
+./src/utilities/useIgnoredEffect.ts
+12:16  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+13:16  Warning: Unexpected any. Specify a different type.  @typescript-eslint/no-explicit-any
+20:6  Warning: React Hook useEffect was passed a dependency list that is not an array literal. This means we can't statically verify whether you've passed the correct dependencies.  react-hooks/exhaustive-deps
+20:6  Warning: React Hook useEffect has a missing dependency: 'ignoredDeps'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+22:3  Warning: React Hook useEffect received a function whose dependencies are unknown. Pass an inline function instead.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
