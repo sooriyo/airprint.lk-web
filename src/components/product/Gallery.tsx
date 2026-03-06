@@ -5,7 +5,7 @@ import type { Media as MediaType, Product } from '@/payload-types'
 import { Media } from '@/components/Media'
 import { GridTileImage } from '@/components/Grid/tile'
 import { useSearchParams } from 'next/navigation'
-import React, { useEffect } from 'react'
+import React, { Suspense, useEffect } from 'react'
 
 import { Carousel, CarouselApi, CarouselContent, CarouselItem } from '@/components/ui/carousel'
 import { DefaultDocumentIDType } from 'payload'
@@ -14,7 +14,7 @@ type Props = {
   gallery: NonNullable<Product['gallery']>
 }
 
-export const Gallery: React.FC<Props> = ({ gallery }) => {
+const GalleryComponent: React.FC<Props> = ({ gallery }) => {
   const searchParams = useSearchParams()
   const [current, setCurrent] = React.useState(0)
   const [api, setApi] = React.useState<CarouselApi>()
@@ -75,5 +75,13 @@ export const Gallery: React.FC<Props> = ({ gallery }) => {
         </CarouselContent>
       </Carousel>
     </div>
+  )
+}
+
+export const Gallery: React.FC<Props> = (props) => {
+  return (
+    <Suspense>
+      <GalleryComponent {...props} />
+    </Suspense>
   )
 }

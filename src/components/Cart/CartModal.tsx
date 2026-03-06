@@ -35,7 +35,7 @@ export function CartModal() {
 
   const totalQuantity = useMemo(() => {
     if (!cart || !cart.items || !cart.items.length) return undefined
-    return cart.items.reduce((quantity, item) => (item.quantity || 0) + quantity, 0)
+    return cart.items.reduce((quantity: number, item: any) => (item.quantity || 0) + quantity, 0)
   }, [cart])
 
   return (
@@ -85,14 +85,15 @@ export function CartModal() {
                   if (isVariant) {
                     price = variant?.priceInUSD
 
-                    const imageVariant = product.gallery?.find((item) => {
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    const imageVariant = product.gallery?.find((item: any) => {
                       if (!item.variantOption) return false
                       const variantOptionID =
                         typeof item.variantOption === 'object'
                           ? item.variantOption.id
                           : item.variantOption
 
-                      const hasMatch = variant?.options?.some((option) => {
+                      const hasMatch = variant?.options?.some((option: any) => {
                         if (typeof option === 'object') return option.id === variantOptionID
                         else return option === variantOptionID
                       })
@@ -132,7 +133,7 @@ export function CartModal() {
                             {isVariant && variant ? (
                               <p className="text-sm text-neutral-500 dark:text-neutral-400 capitalize">
                                 {variant.options
-                                  ?.map((option) => {
+                                  ?.map((option: any) => {
                                     if (typeof option === 'object') return option.label
                                     return null
                                   })

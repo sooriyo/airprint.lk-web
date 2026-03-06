@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import { mergeOpenGraph } from '@/utilities/mergeOpenGraph'
-import { headers as getHeaders } from 'next/headers.js'
+import { headers as getHeaders } from 'next/headers'
 import configPromise from '@payload-config'
 import { Order } from '@/payload-types'
 import { getPayload } from 'payload'

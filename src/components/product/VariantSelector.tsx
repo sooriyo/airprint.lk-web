@@ -6,9 +6,9 @@ import type { Product } from '@/payload-types'
 import { createUrl } from '@/utilities/createUrl'
 import clsx from 'clsx'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
-import React from 'react'
+import React, { Suspense } from 'react'
 
-export function VariantSelector({ product }: { product: Product }) {
+function VariantSelectorComponent({ product }: { product: Product }) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -20,7 +20,7 @@ export function VariantSelector({ product }: { product: Product }) {
     return null
   }
 
-  return variantTypes?.map((type) => {
+  return variantTypes?.map((type: any) => {
     if (!type || typeof type !== 'object') {
       return <></>
     }
@@ -36,7 +36,7 @@ export function VariantSelector({ product }: { product: Product }) {
         <dt className="mb-4 text-sm">{type.label}</dt>
         <dd className="flex flex-wrap gap-3">
           <React.Fragment>
-            {options?.map((option) => {
+            {options?.map((option: any) => {
               if (!option || typeof option !== 'object') {
                 return <></>
               }
@@ -62,12 +62,12 @@ export function VariantSelector({ product }: { product: Product }) {
               // Find a matching variant
               if (variants) {
                 const matchingVariant = variants
-                  .filter((variant) => typeof variant === 'object')
-                  .find((variant) => {
+                  .filter((variant: any) => typeof variant === 'object')
+                  .find((variant: any) => {
                     if (!variant.options || !Array.isArray(variant.options)) return false
 
                     // Check if all variant options match the current options in the URL
-                    return variant.options.every((variantOption) => {
+                    return variant.options.every((variantOption: any) => {
                       if (typeof variantOption !== 'object')
                         return currentOptions.includes(String(variantOption))
 
@@ -77,9 +77,9 @@ export function VariantSelector({ product }: { product: Product }) {
 
                 if (matchingVariant) {
                   // If we found a matching variant, set the variant ID in the search params.
-                  optionSearchParams.set('variant', String(matchingVariant.id))
+                  optionSearchParams.set('variant', String((matchingVariant as any).id))
 
-                  if (matchingVariant.inventory && matchingVariant.inventory > 0) {
+                  if ((matchingVariant as any).inventory && (matchingVariant as any).inventory > 0) {
                     isAvailableForSale = true
                   } else {
                     isAvailableForSale = false
@@ -119,4 +119,12 @@ export function VariantSelector({ product }: { product: Product }) {
       </dl>
     )
   })
+}
+
+export function VariantSelector(props: { product: Product }) {
+  return (
+    <Suspense>
+      <VariantSelectorComponent {...props} />
+    </Suspense>
+  )
 }

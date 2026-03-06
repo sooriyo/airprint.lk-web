@@ -4,13 +4,13 @@ import { cn } from '@/utilities/cn'
 import { createUrl } from '@/utilities/createUrl'
 import { SearchIcon } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import React from 'react'
+import React, { Suspense } from 'react'
 
 type Props = {
   className?: string
 }
 
-export const Search: React.FC<Props> = ({ className }) => {
+const SearchComponent: React.FC<Props> = ({ className }) => {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -45,5 +45,13 @@ export const Search: React.FC<Props> = ({ className }) => {
         <SearchIcon className="h-4 w-4 text-gray-400" />
       </div>
     </form>
+  )
+}
+
+export const Search: React.FC<Props> = (props) => {
+  return (
+    <Suspense>
+      <SearchComponent {...props} />
+    </Suspense>
   )
 }

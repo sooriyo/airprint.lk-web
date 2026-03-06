@@ -1,18 +1,13 @@
 'use client'
 import { Product, Variant } from '@/payload-types'
 import { useSearchParams } from 'next/navigation'
-import { useMemo } from 'react'
+import { Suspense, useMemo } from 'react'
 
-type Props = {
-  product: Product
-}
-
-export const StockIndicator: React.FC<Props> = ({ product }) => {
+const StockIndicatorComponent: React.FC<Props> = ({ product }) => {
   const searchParams = useSearchParams()
 
-  const variants = product.variants?.docs || []
-
   const selectedVariant = useMemo<Variant | undefined>(() => {
+    const variants = product.variants?.docs || []
     if (product.enableVariants && variants.length) {
       const variantId = searchParams.get('variant')
       const validVariant = variants.find((variant) => {
@@ -28,7 +23,7 @@ export const StockIndicator: React.FC<Props> = ({ product }) => {
     }
 
     return undefined
-  }, [product.enableVariants, searchParams, variants])
+  }, [product.enableVariants, searchParams, product.variants?.docs])
 
   const stockQuantity = useMemo(() => {
     if (product.enableVariants) {
@@ -48,5 +43,17 @@ export const StockIndicator: React.FC<Props> = ({ product }) => {
       {stockQuantity < 10 && stockQuantity > 0 && <p>Only {stockQuantity} left in stock</p>}
       {(stockQuantity === 0 || !stockQuantity) && <p>Out of stock</p>}
     </div>
+  )
+}
+
+type Props = {
+  product: Product
+}
+
+export const StockIndicator: React.FC<Props> = (props) => {
+  return (
+    <Suspense>
+      <StockIndicatorComponent {...props} />
+    </Suspense>
   )
 }

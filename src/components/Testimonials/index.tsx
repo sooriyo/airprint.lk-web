@@ -104,7 +104,7 @@ export async function Testimonials() {
                     See what our customers say
                 </h2>
                 <p className="text-gray-600 mb-8 max-w-lg font-light">
-                    Don't let what we say influence you, take it from our customers!
+                    Don&apos;t let what we say influence you, take it from our customers!
                 </p>
                 <Link
                     href="#reviews"

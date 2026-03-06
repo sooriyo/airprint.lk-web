@@ -3,9 +3,9 @@
 import { LoadingSpinner } from '@/components/LoadingSpinner'
 import { useCart, usePayments } from '@payloadcms/plugin-ecommerce/client/react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useRef } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 
-export const ConfirmOrder: React.FC = () => {
+const ConfirmOrderComponent: React.FC = () => {
   const { confirmOrder } = usePayments()
   const { cart } = useCart()
 
@@ -59,5 +59,13 @@ export const ConfirmOrder: React.FC = () => {
 
       <LoadingSpinner className="w-12 h-6" />
     </div>
+  )
+}
+
+export const ConfirmOrder: React.FC = () => {
+  return (
+    <Suspense>
+      <ConfirmOrderComponent />
+    </Suspense>
   )
 }

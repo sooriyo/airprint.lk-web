@@ -9,7 +9,7 @@ import { Label } from '@/components/ui/label'
 import { useAuth } from '@/providers/Auth'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
-import React, { useCallback, useRef, useState } from 'react'
+import React, { Suspense, useCallback, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 type FormData = {
@@ -18,7 +18,7 @@ type FormData = {
   passwordConfirm: string
 }
 
-export const CreateAccountForm: React.FC = () => {
+const CreateAccountFormComponent: React.FC = () => {
   const searchParams = useSearchParams()
   const allParams = searchParams.toString() ? `?${searchParams.toString()}` : ''
   const { login } = useAuth()
@@ -133,5 +133,13 @@ export const CreateAccountForm: React.FC = () => {
         </p>
       </div>
     </form>
+  )
+}
+
+export const CreateAccountForm: React.FC = () => {
+  return (
+    <Suspense>
+      <CreateAccountFormComponent />
+    </Suspense>
   )
 }
